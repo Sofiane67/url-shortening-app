@@ -1,0 +1,37 @@
+@import "../../sass/main.scss"; 
+.navLinksHeader{
+    &__list{
+        display: flex;
+    }
+
+    &__list{
+        @include media-queries(map-get($breakpoints, bp-900)){
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__item{
+        @include media-queries(map-get($breakpoints, bp-900)){
+            margin: 2rem 0;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    &__link{
+        padding: 0 3rem;
+
+        @include media-queries(map-get($breakpoints, bp-900)){
+            color: #fff;
+        }
+
+        &:hover{
+            color: $color-footer-dark-violet;
+        }
+        
+        &--active{
+            // color: #000;
+        }
+    }
+}

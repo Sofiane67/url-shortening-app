@@ -1,0 +1,27 @@
+@import "../../../sass/main.scss";
+
+.footer{
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    background-color: $color-footer-dark-violet;
+
+    @include media-queries(map-get($breakpoints, bp-1260)){
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    &__icon{
+        fill: #fff;
+
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        &:hover{
+            fill: $color-primary-cyan;
+        }
+    }
+}
+

@@ -1,0 +1,17 @@
+@import "../../sass/main.scss";
+
+.feature-icon{
+    &__box{
+        background-color: $color-primary-dark-violet;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 0;
+        top:0;
+        transform: translateY(-50%);
+    }
+}

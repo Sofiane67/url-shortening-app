@@ -1,0 +1,28 @@
+@import "../../sass/main.scss";
+
+.list-url{
+
+    &__card{
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        background-color: #fff;
+        border-radius: .5rem;
+        padding: 2rem;
+        font-weight: 700;
+    }
+
+    &__long-link{
+        margin-right: auto;
+        color: $color-footer-dark-violet;
+    }
+
+    &__short-link{
+        margin-right: 3rem;
+        color: $color-primary-cyan;
+    }
+
+    &__copyBtn, &__copyBtn:hover{
+        background-color: $color-primary-dark-violet;
+    }
+}

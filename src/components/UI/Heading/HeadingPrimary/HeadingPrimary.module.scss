@@ -1,0 +1,12 @@
+@import "../../../../sass/main.scss";
+
+.heading-primary{
+    color: $color-text-dark-blue;
+    font-size: 6rem;
+    line-height: 7rem;
+
+    @include media-queries(map-get($breakpoints, bp-600)){
+        font-size: 4rem;
+        line-height: 5rem;
+    }
+}

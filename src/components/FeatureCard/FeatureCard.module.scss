@@ -1,0 +1,49 @@
+@import "../../sass/main.scss";
+
+.feature-card{
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 0 3rem 3rem 3rem;
+    // height: 25rem;
+    position: relative;
+    z-index: 2;
+
+    @include media-queries(map-get($breakpoints, bp-900)){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40rem;
+        text-align: center;
+	}
+
+    &--0{
+        grid-column: 1/2;
+        grid-row: 1/4;
+        align-self: start;
+
+        @include media-queries(map-get($breakpoints, bp-900)){
+            margin-bottom: 10rem;
+            align-self: center;
+	    }
+    }
+
+    &--1{
+        grid-column: 2/3;
+        grid-row: 2/4;
+        align-self: start;
+
+        @include media-queries(map-get($breakpoints, bp-900)){
+            margin-bottom: 10rem;
+            align-self: center;
+	    }
+    }
+
+    &--2{
+        grid-column: 3/4;
+        grid-row: 3/4;
+
+        @include media-queries(map-get($breakpoints, bp-900)){
+            align-self: center;
+	    }
+    }
+}

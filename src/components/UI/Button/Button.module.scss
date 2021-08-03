@@ -1,0 +1,32 @@
+@import "../../../sass/main.scss";
+
+.button{
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    margin-right: 2rem;
+
+    &--border{
+        background-color: $color-primary-cyan;
+        color: #fff;
+        padding: 1rem 3rem;
+        margin-right: 0;
+        transition: all .4s;
+        box-sizing: initial;
+
+         &:hover{
+            background-color: lighten($color-primary-cyan, 15%);
+         }
+    }
+
+    &--border-circle{
+        border-radius: 3rem;
+    }
+
+    &--border-small-radius{
+        border-radius: .6rem;
+    }
+
+}

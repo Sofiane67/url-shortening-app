@@ -1,0 +1,10 @@
+@import "../../../../sass/main.scss";
+
+.heading-secondary{
+    color: $color-text-dark-blue;
+    font-size: 3rem;
+
+    &--white{
+        color: #fff;
+    }
+}

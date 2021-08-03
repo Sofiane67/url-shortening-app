@@ -1,0 +1,62 @@
+@import "../../sass/main.scss";
+
+.burger-menu{
+    &__icon-box{
+        display: none;
+        position: fixed;
+        z-index: 3;
+        right: 0;
+        transform: translateX(-3rem);
+        cursor: pointer;
+
+        @include media-queries(map-get($breakpoints, bp-900)){
+            display: block;
+        }
+    }
+
+    &__checkbox{
+        display: none;
+        &:checked ~ div{
+            max-height: 69rem;
+            padding: 4rem;
+            transition: padding .1s, max-height .4s;
+
+            &>nav,
+            &>div{
+                @include media-queries(map-get($breakpoints, bp-900)){
+                    top: 0;
+                    opacity: 1;
+                    transition: opacity.7s, top .2s;
+                }
+            }
+        }
+    }
+
+    &__icon{
+        display: inline-block;
+        width: 5rem;
+        height: .5rem;
+        background-color: $color-text-grayish-violet;
+        position: relative;
+
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 5rem;
+            height: .5rem;
+            background-color: $color-text-grayish-violet;
+            position: absolute;
+            transform: translateY(-1.4rem);
+        }
+
+        &::before{
+            content: "";
+            display: inline-block;
+            width: 5rem;
+            height: .5rem;
+            background-color: $color-text-grayish-violet;
+            position: absolute;
+            transform: translateY(1.4rem);
+        }
+    }
+}

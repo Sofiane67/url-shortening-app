@@ -1,0 +1,61 @@
+@import "./sass/main.scss";
+
+html{
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	@include media-queries(map-get($breakpoints, bp-1260)){
+		font-size: 56.25%;
+	}
+
+	@include media-queries(map-get($breakpoints, bp-1024)){
+		font-size: 50%;
+	}
+}
+
+*,
+*::before,
+*::after{
+ 	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	color: $color-text-grayish-violet;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.6rem;
+
+	@include media-queries(map-get($breakpoints, bp-1260)){
+		font-size: 1.8rem;
+	}
+	
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	/* color: #000; */
+}
+
+button{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#root{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}

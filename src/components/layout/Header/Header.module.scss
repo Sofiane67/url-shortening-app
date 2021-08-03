@@ -1,0 +1,62 @@
+@import "../../../sass/main.scss";
+.header{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    width: 118rem;
+    font-weight: 700;
+
+    @include media-queries(map-get($breakpoints, bp-1260)){
+		padding: 0 3rem;
+        width: 100%;
+	}
+
+    &__menu{
+        display: flex;
+        width: 100%;
+
+        @include media-queries(map-get($breakpoints, bp-900)){
+            flex-direction: column;
+            align-items: center;
+            position: fixed;
+            top: 10rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            border-radius: 2rem;
+            background-color: $color-primary-dark-violet;
+            z-index: 3;
+            max-height: 0;
+            padding: 0;
+            transition: all .4s;
+        }
+
+        &>nav,
+        &>div{
+            @include media-queries(map-get($breakpoints, bp-900)){
+                position: relative;
+                top: -100rem;
+                opacity: 0;
+                transition: opacity.4s, top 1.4s;
+            }
+        }
+    }
+
+    &__button-box{
+        margin-left: auto;
+        @include media-queries(map-get($breakpoints, bp-900)){
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            border-top: solid 1px $color-text-grayish-violet;
+        }
+
+        & button{
+            @include media-queries(map-get($breakpoints, bp-900)){
+                margin: 2rem 0;
+                color: #fff;
+            }
+        }
+    }
+}
